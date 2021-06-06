@@ -1,0 +1,202 @@
+*, body
+{
+    margin:0;
+    border:0;
+}
+
+.menu + img
+{
+    width:100%;
+}
+
+body
+{
+    text-align:center;
+}
+
+p
+{
+    font-size: 125%;
+}
+
+li
+{
+    font-size: 110%;
+}
+
+header, main
+{
+    margin:3% 25% 3% 25%;
+}
+
+.main p
+{
+    font-size:150%;
+}
+
+.blue
+{
+    padding:2% 0 0 0;
+    background-color: #04abed;
+}
+
+header h1
+{
+    margin:0 0 3% 0;
+}
+
+header p
+{
+    margin:0 0 3% 0;
+    font-family:arial;
+    color:#04abed;
+}
+
+hr
+{
+    height:1px;
+    background-color: rgb(212, 212, 212);
+}
+
+.menu
+{
+    width:100%;
+    margin:3% 0 3% 0;
+    display:flex;
+    justify-content:center;
+    justify-content:space-around;
+}
+
+.menu a
+{
+    text-decoration:none;
+    color:gray;
+}
+
+.menu a:hover
+{
+    text-decoration:none;
+    color:#04abed;
+}
+
+article
+{
+    width:78%;
+}
+
+.access
+{
+    float:right;
+    width:20%;
+    height:100%;
+    margin-left:2%;
+    text-align:left;
+}
+
+.access a img
+{
+    margin-top:3%;
+    width:80%;
+    padding:5px;
+    border:solid black 1px;
+}
+
+.access a img:hover
+{
+    background-color:rgb(238, 238, 238);
+}
+
+.cabinet-infos
+{
+    margin:1% 0 2% 0;
+}
+
+.cabinet-infos p
+{
+    margin:0 0 3% 0;
+}
+
+.actualites, .rdv, .actualites h3, .rdv .h4
+{
+    margin: 10% 0 2% 0;
+}
+
+.actualites, .rdv, .honoraires
+{
+    line-height: 180%;
+}
+
+.horaires
+{
+    margin:3% 0 3% 0;
+}
+
+.honoraires
+{
+    margin:5% 0 0 0;
+}
+
+.actualites p, .rdv p, .honoraires p, .honoraires ul
+{
+    text-align:left;
+}
+
+ul
+{
+    padding:0;
+    margin-left:3%;
+}
+
+ul ul
+{
+    margin-left:10%;
+    list-style-type:none;
+}
+
+footer .blue
+{
+    display:flex;
+    flex-direction: column;
+    font-size: 80%;
+}
+
+footer .blue div
+{
+    margin:0 20% 0 20%;
+    display:flex;
+    justify-content: space-around;
+    color:white;
+}
+
+footer .blue div a
+{
+    margin:0 10% 0 10%;
+    display:flex;
+    justify-content: space-around;
+    color:white;
+    font-size:125%;
+}
+
+footer .blue div img
+{
+    width:5%;
+    margin:0 5% 0 5%;
+}
+
+footer .blue div+div+div
+{
+    /*margin-bottom:3%;*/
+    padding:0 2% 3% 2%;
+}
+
+footer .black
+{
+    padding:1%;
+    background-color: black;
+}
+
+footer .black a
+{
+    text-decoration:none;
+    color:#04abed;
+}
