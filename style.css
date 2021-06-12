@@ -1,204 +1,135 @@
-*, body
+*,body
 {
-    margin:0;
     border:0;
-}
-
-.menu + img
-{
-    width:100%;
+    margin:0;
 }
 
 body
 {
-    text-align:center;
+    width:100%;
+}
+
+.h
+{
+    position:absolute;
+    top:0;
+    width:1px;
+    height:5000px;
+}
+
+.container
+{
+    position:absolute;
+    top:0;
+    right:1vw;
+    width:10vw;
+    height:1500px;
+}
+
+.reservation
+{
+    position:sticky;
+    top:0;
+    border:1px solid transparent;
+    width:100%;
+}
+
+.reservation img
+{
+    position:absolute;
+    width:25%;
+    top:0.5vw;
+    right:0.5vw;
+}
+
+.reservation img:hover
+{
+    width:30%;
+    top:0.1vw;
+    right:0.1vw;
+    border:2px solid black;
+}
+
+.reservation p
+{
+    color:white;
+}
+
+header
+{
+    overflow: hidden;
+    background-color: gray;
+}
+
+h1
+{
+    margin:1vw;
+}
+
+nav
+{
+    background-color: saddlebrown;
+    text-align: center;
+    margin:1vw;
+}
+
+nav a
+{
+    text-decoration: none;
+    padding:0 3vw;;
+    color:white;
+}
+
+nav a:hover
+{
+    background-color: black;
+}
+
+.restaurant-picture
+{
+    margin:1vw 1vw 2vw 1vw;
+}
+
+.restaurant-picture img
+{
+    display:block;
+    border:0;
+    width:100%;
+}
+
+main
+{
+    overflow:hidden;
+    background-color: lightgray;
+}
+
+main h1
+{
+    margin:3vw 1vw;
 }
 
 p
 {
-    font-size: 125%;
+    margin:2vw 1vw;
 }
 
-li
+button
 {
-    font-size: 110%;
+    background-color: rgb(185, 79, 255);
+    margin:0 1vw;
 }
 
-header, main
+button:hover
 {
-    margin:3% 25% 3% 25%;
-    width:50vmax;
-}
-
-.main p
-{
-    font-size:150%;
-}
-
-.blue
-{
-    padding:2% 0 0 0;
-    background-color: #04abed;
-    width:100vw;
-}
-
-header h1
-{
-    margin:0 0 3% 0;
-}
-
-header p
-{
-    margin:0 0 3% 0;
-    font-family:arial;
-    color:#04abed;
-}
-
-hr
-{
-    height:1px;
-    background-color: rgb(212, 212, 212);
-}
-
-.menu
-{
-    width:100%;
-    margin:3% 0 3% 0;
-    display:flex;
-    justify-content:center;
-    justify-content:space-around;
-}
-
-.menu a
-{
-    text-decoration:none;
-    color:gray;
-}
-
-.menu a:hover
-{
-    text-decoration:none;
-    color:#04abed;
-}
-
-article
-{
-    width:78%;
-}
-
-.access
-{
-    float:right;
-    width:20%;
-    height:100%;
-    margin-left:2%;
-    text-align:left;
-}
-
-.access a img
-{
-    margin-top:3%;
-    width:80%;
-    padding:5px;
-    border:solid black 1px;
-}
-
-.access a img:hover
-{
-    background-color:rgb(238, 238, 238);
-}
-
-.cabinet-infos
-{
-    margin:1% 0 2% 0;
-}
-
-.cabinet-infos p
-{
-    margin:0 0 3% 0;
-}
-
-.actualites, .rdv, .actualites h3, .rdv .h4
-{
-    margin: 10% 0 2% 0;
-}
-
-.actualites, .rdv, .honoraires
-{
-    line-height: 180%;
-}
-
-.horaires
-{
-    margin:3% 0 3% 0;
-}
-
-.honoraires
-{
-    margin:5% 0 0 0;
-}
-
-.actualites p, .rdv p, .honoraires p, .honoraires ul
-{
-    text-align:left;
-}
-
-ul
-{
-    padding:0;
-    margin-left:3%;
-}
-
-ul ul
-{
-    margin-left:10%;
-    list-style-type:none;
-}
-
-footer .blue
-{
-    display:flex;
-    flex-direction: column;
-    font-size: 80%;
-}
-
-footer .blue div
-{
-    margin:0 20% 0 20%;
-    display:flex;
-    justify-content: space-around;
     color:white;
+    background-color: rgb(153, 0, 255);
 }
 
-footer .blue div a
+a img
 {
-    margin:0 10% 0 10%;
-    display:flex;
-    justify-content: space-around;
-    color:white;
-    font-size:125%;
-}
-
-footer .blue div img
-{
-    width:5%;
-    margin:0 5% 0 5%;
-}
-
-footer .blue div+div+div
-{
-    /*margin-bottom:3%;*/
-    padding:0 2% 3% 2%;
-}
-
-footer .black
-{
-    padding:1%;
-    background-color: black;
-}
-
-footer .black a
-{
-    text-decoration:none;
-    color:#04abed;
+    width:2vw;
+    position:fixed;
+    bottom:0;
+    left:50vw;
+    background-color: brown;
 }
