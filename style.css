@@ -185,6 +185,15 @@ hr
     }
 }
 
+@media screen and (max-width: 719px) {
+    .social, .top-bar .nav-bar
+    {
+        padding: 15px 0 0 0;
+        display: block;
+        float: left;
+    }
+}
+
 @media screen and (max-width: 591px) {
     .article-img
     {
@@ -194,5 +203,12 @@ hr
     .article-content
     {
         margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .nav-bar a
+    { 
+        white-space: nowrap;
     }
 }
