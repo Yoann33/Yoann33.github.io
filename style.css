@@ -184,3 +184,15 @@ hr
         width: 100%;
     }
 }
+
+@media screen and (max-width: 591px) {
+    .article-img
+    {
+        position: static;
+    }
+
+    .article-content
+    {
+        margin-left: 0;
+    }
+}
