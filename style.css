@@ -1,227 +1,29 @@
-body, html
-{
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 1.1rem;
-    line-height: 1.5;
-}
-
-.top-bar
-{
-    background: white;
-    left: 0;
-    right: 0;
-    height: 100px;
-}
-
-.top-bar .nav-bar
-{
-    padding: 30px;
-    float: left;
-}
-
-.nav-bar a
-{
-    text-decoration: none;
-    padding: 30px;
-    color: black;
-    opacity: 0.4;
-}
-
-.nav-bar a:hover
-{
-    opacity: 1;
-}
-
-.social
-{
-    padding: 30px;
-    float: right;
-}
-
-.social a
-{
-    padding: 5px 15px;
-    opacity: 0.4;
-}
-
-.social a:hover
-{
-    opacity: 1;
-}
-
-.banner
-{
-    width: 100%;
-    height: 500px;
-    background: no-repeat center center / cover url("footing.jpg");
-}
-
-.body-middle-content
-{
-    display: flex;
-}
-
-.main
-{
-    width: calc(100% - 300px);
-    box-shadow: -4px 0px 10px black;
-    z-index: 2;
-}
-
-.article-container
-{
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.article
-{
-    position: relative;
-    min-height: 250px;
-    margin: 50px 0;
-}
-
-.article .publication-date
-{
-    margin: 0;
-    opacity: 0.5;
-}
-
-.article a
-{
-    text-decoration: none;
-    color: black;
-}
-
-.article a:hover
-{
-    text-decoration: underline;
-}
-
-.article-img
-{
-    left: 0;
-    top: 0;
-    width: 300px;
+.gameScreen {
     position: absolute;
+    width: 1000px;
+    height: 500px;
+    left: 400px;
+    border: 1px solid black;
 }
 
-.article-img img
-{
-    width: 100%;
+.block {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: green;
 }
 
-.article-content
-{
-    top: 0;
-    margin-left: 330px;
+.player {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: blue;
 }
 
-.article-content h4
-{
-    margin: 10px 0;
-}
-
-.aside
-{
-    width: 300px;
-    background: rgb(241, 241, 241);
-    height: 134vh;
-    z-index: 1;
-}
-
-.listing
-{
-    margin-left: 30px;
-}
-
-.listing li
-{
-    list-style: none;
-}
-
-.listing a
-{
-    text-decoration: none;
-    color: black;
-    padding: 4px 0;
-    opacity: 0.4;
-}
-
-.listing a:hover
-{
-    opacity: 1;
-}
-
-.listing ul
-{
-    padding: 0;
-}
-
-hr
-{
-    margin: 0;
-}
-
-@media screen and (max-width: 972px) {
-    .body-middle-content
-    {
-        display: block;
-        padding: 0 20px;
-    }
-
-    .main{
-        width: 100%;
-        box-shadow: none;
-    }
-
-    .main .article-content
-    {
-        overflow: hidden;
-    }
-
-    .aside
-    {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 719px) {
-    .social, .top-bar .nav-bar
-    {
-        float: none;
-        text-align: center;
-    }
-
-    .top-bar .nav-bar, .top-bar .nav-bar a, .social
-    {
-        padding: 15px;
-    }
-}
-
-@media screen and (max-width: 591px) {
-    .article-img
-    {
-        position: static;
-    }
-
-    .article-content
-    {
-        margin-left: 0;
-    }
-}
-
-@media screen and (max-width: 555px) {
-    .nav-bar a
-    { 
-        white-space: nowrap;
-    }
-}
-
-@media screen and (max-width: 391px){
-    .top-bar .nav-bar a
-    {
-        padding: 5px;
-    }
+.ball {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border-radius: 10px;
+    background-color: red;
 }
