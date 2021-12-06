@@ -119,7 +119,7 @@ function checkEndOfParty()
     {
         ball.classList.remove('ball')
         gameScreen.removeChild(ball)
-        Message.textContent = "You lose!"+Message.textContent
+        Message.textContent = "You loose!"+Message.textContent
         document.body.appendChild(Message)
     }
     else
