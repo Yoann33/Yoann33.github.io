@@ -182,7 +182,7 @@ function moveBall()
     {
         Ball.Y_Direction *= -1
     }
-    console.log(blocks.length)
+
     checkEndOfParty()
     positionBall()
 }
