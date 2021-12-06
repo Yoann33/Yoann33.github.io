@@ -22,7 +22,7 @@ const ballStartPosition = [gameScreenWidth/2,11+playerHeight+ballRadius]
 let removingClass = false
 
 let endMessage = document.createElement('h1')
-endMessage.textContent = "You win!"
+endMessage.textContent = "You win! Press F5 to try again"
 endMessage.style.position = "absolute"
 endMessage.style.left = gameScreenLeft + gameScreenWidth/2 - 50 + "px"
 endMessage.style.top = gameScreenHeight + "px"
@@ -44,8 +44,8 @@ class BallProperties {
         this.right = [x+ballRadius,y]
         this.bottom = [x,y-ballRadius]
         this.left = [x-ballRadius,y]
-        this.X_Direction = 1
-        this.Y_Direction = 1
+        this.X_Direction = 0
+        this.Y_Direction = 0
     }
 }
 
@@ -119,7 +119,7 @@ function checkEndOfParty()
     {
         ball.classList.remove('ball')
         gameScreen.removeChild(ball)
-        endMessage.textContent = "You lose!"
+        endMessage.textContent = "You lose! Press F5 to try again."
         document.body.appendChild(endMessage)
     }
     else
@@ -187,16 +187,32 @@ function moveBall()
     positionBall()
 }
 
-document.addEventListener('keydown',movePlayer)
-var refresh = setInterval(function(){
-    if(Ball.X_Direction == 0)
+function startGame(e)
+{
+    Ball.Y_Direction == 1
+    if((e.key === "ArrowLeft"))
     {
-        clearInterval(refresh);
+        Ball.X_Direction == -1
     }
-    else
+    else if(e.key === "ArrowRight")
     {
-        moveBall()
+        Ball.X_Direction == 1
     }
-},6)
+    document.removeEventListener("keydown")
+    document.addEventListener('keydown',movePlayer)
+    var refresh = setInterval(function(){
+        if(Ball.X_Direction == 0)
+        {
+            clearInterval(refresh);
+        }
+        else
+        {
+            moveBall()
+        }
+    },6)
+}
+
+document.addEventListener("keydown",startGame)
+
 addBlocks()
 positionPlayer()
