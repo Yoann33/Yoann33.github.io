@@ -198,7 +198,7 @@ function startGame(e)
     {
         Ball.X_Direction == 1
     }
-    document.removeEventListener("keydown")
+    document.removeEventListener("keydown",startGame)
     document.addEventListener('keydown',movePlayer)
     var refresh = setInterval(function(){
         if(Ball.X_Direction == 0)
