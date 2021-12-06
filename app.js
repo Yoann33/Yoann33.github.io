@@ -21,11 +21,11 @@ ballRadius = 10
 const ballStartPosition = [gameScreenWidth/2,11+playerHeight+ballRadius]
 let removingClass = false
 
-let endMessage = document.createElement('h1')
-endMessage.textContent = "You win!"
-endMessage.style.position = "absolute"
-endMessage.style.left = gameScreenLeft + gameScreenWidth/2 - 50 + "px"
-endMessage.style.top = gameScreenHeight + "px"
+let Message = document.createElement('h1')
+Message.style.position = "absolute"
+Message.style.left = gameScreenLeft + gameScreenWidth/2 - 50 + "px"
+Message.style.top = gameScreenHeight + "px"
+Message.textContent = "Press '<=' or '=>' to start."
 
 //Block dimensions properties
 class Block {
@@ -119,8 +119,8 @@ function checkEndOfParty()
     {
         ball.classList.remove('ball')
         gameScreen.removeChild(ball)
-        endMessage.textContent = "You lose!"
-        document.body.appendChild(endMessage)
+        Message.textContent = "You lose!"+Message.textContent
+        document.body.appendChild(Message)
     }
     else
     {
@@ -130,7 +130,8 @@ function checkEndOfParty()
             Ball.Y_Direction = 0
             ball.classList.remove('ball')
             gameScreen.removeChild(ball)
-            document.body.appendChild(endMessage)
+            Message.textContent = "You win!"+Message.textContent
+            document.body.appendChild(Message)
         }
     }
 }
@@ -200,7 +201,8 @@ function startGame(e)
         {
             Ball.X_Direction = 1
         }
-        document.body.removeChild($startMessage);
+        document.body.removeChild(Message);
+        Message.textContent = " Press F5 to try again."
         document.removeEventListener('keydown',startGame)
         document.addEventListener('keydown',movePlayer)
         var refresh = setInterval(function(){
@@ -216,7 +218,7 @@ function startGame(e)
     }
 }
 document.addEventListener('keydown',startGame)
-$startMessage = document.createElement("<div class='startMessage'>Press '<-' or '->' to start</div>")
-document.body.appendChild($startMessage)
+
+document.body.appendChild(Message)
 addBlocks()
 positionPlayer()
