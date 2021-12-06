@@ -189,27 +189,30 @@ function moveBall()
 
 function startGame(e)
 {
-    Ball.Y_Direction == 1
-    if((e.key === "ArrowLeft"))
+    if((e.key === "ArrowLeft")||(e.key === "ArrowRight"))
     {
-        Ball.X_Direction == -1
-    }
-    else if(e.key === "ArrowRight")
-    {
-        Ball.X_Direction == 1
-    }
-    document.removeEventListener("keydown",startGame)
-    document.addEventListener('keydown',movePlayer)
-    var refresh = setInterval(function(){
-        if(Ball.X_Direction == 0)
+        Ball.Y_Direction == 1
+        if(e.key === "ArrowLeft")
         {
-            clearInterval(refresh);
+            Ball.X_Direction == -1
         }
-        else
+        if(e.key === "ArrowRight")
         {
-            moveBall()
+            Ball.X_Direction == 1
         }
-    },6)
+        document.removeEventListener("keydown",startGame)
+        document.addEventListener('keydown',movePlayer)
+        var refresh = setInterval(function(){
+            if(Ball.X_Direction == 0)
+            {
+                clearInterval(refresh);
+            }
+            else
+            {
+                moveBall()
+            }
+        },6)
+    }
 }
 
 document.addEventListener("keydown",startGame)
