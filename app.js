@@ -23,7 +23,7 @@ let removingClass = false
 
 let Message = document.createElement('h1')
 Message.style.position = "absolute"
-Message.style.left = gameScreenLeft + gameScreenWidth/2 - 50 + "px"
+Message.style.left = gameScreenLeft + gameScreenWidth/2 - 150 + "px"
 Message.style.top = gameScreenHeight + "px"
 Message.textContent = "Press '<=' or '=>' to start."
 
@@ -203,6 +203,7 @@ function startGame(e)
         }
         document.body.removeChild(Message);
         Message.textContent = " Press F5 to try again."
+        Message.style.left = Message.style.left + 50 + "px"
         document.removeEventListener('keydown',startGame)
         document.addEventListener('keydown',movePlayer)
         var refresh = setInterval(function(){
