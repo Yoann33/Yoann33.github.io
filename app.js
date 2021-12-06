@@ -200,6 +200,7 @@ function startGame(e)
         {
             Ball.X_Direction = 1
         }
+        document.body.removeChild($startMessage);
         document.removeEventListener('keydown',startGame)
         document.addEventListener('keydown',movePlayer)
         var refresh = setInterval(function(){
@@ -215,6 +216,7 @@ function startGame(e)
     }
 }
 document.addEventListener('keydown',startGame)
-
+$startMessage = createElement("<div .startMessage>Press '<-' or '->' to start</div>")
+document.body.appendChild($startMessage)
 addBlocks()
 positionPlayer()
