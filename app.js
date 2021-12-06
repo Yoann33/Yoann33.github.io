@@ -216,7 +216,7 @@ function startGame(e)
     }
 }
 document.addEventListener('keydown',startGame)
-$startMessage = createElement("<div .startMessage>Press '<-' or '->' to start</div>")
+$startMessage = document.createElement("<div .startMessage>Press '<-' or '->' to start</div>")
 document.body.appendChild($startMessage)
 addBlocks()
 positionPlayer()
